@@ -31,6 +31,35 @@ console.log(a);
 ```
 > never Do **var a = undefined;**
 
+> Scope is directly dependent on Lexical Environment
+> Every function has lexical environment of it's parent
 
+**Scope Chain**
+> if variable is not fond in local memory, it will go to lexical environment of Parent, and this is called as Scope Chain
+![Scope Chain](./js_images/scopeChain.png)
+
+```javascript
+function a() {
+    console.log("in function a::" + num);
+    b();
+    function b() {
+        console.log("in function b::" + num);
+        c();
+        function c() {
+            console.log("in function c::" + mum);
+        }
+    }
+}
+var num = 10;
+a();
+console.log("in globla function ::" + num);
+
+/**
+ * Every function has lexical environment of it's parent
+ * function C has lexical environment of function A
+ * function A has lexical environment of function Global
+ * Global has lexical environment as null
+ */
+```
 
 Thanks To **@Akshay Saini** for sharing the knowledge
