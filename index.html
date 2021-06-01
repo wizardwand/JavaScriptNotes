@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shirish JS learning</title>
+
+    <!--Insert your code bellow in Script -->
+    <script>
+        function getNumber() {
+            const num = parseInt(prompt("please enter a number::"));
+            console.log(num);
+            if (!isNaN(num) && typeof num === "number") {
+                return num;
+            } else {
+                getNumber();
+            }
+        }
+
+        let num = getNumber(), total = 0;
+        for (let i = 1; i < num; i++) {
+            total += i;
+        }
+        console.log("Sum of numbers from 1 to " + num + " is ::" + total);
+    </script>
+</head>
+
+<body>
+    Namaste JS :)
+</body>
+
+</html>
